@@ -15,6 +15,7 @@ Jogo das Carinhas - Teste
 :Copyright: 2013, `GPL <http://is.gd/3Udt>`__.
 """
 import unittest
+from random import shuffle
 from carinhas import Carinhas
 
 class TestCatinhas(unittest.TestCase):
@@ -27,15 +28,22 @@ class TestCatinhas(unittest.TestCase):
            
             def setAttribute(self, *x):
                 self.opacity = 0.5
+            def image(self, *x, **kw):
+                return self
+            def svg(self, *x, **kw):
+                return self
        
         self.gui = Gui()
         self.app = Carinhas(self.gui)
 
     def test_tabuleiro(self):
         "garante que tem casas no tabuleiro."
-        self.app.build_tabuleiro(self.gui)
+        casas = range(16)
+        shuffle(casas)
+        self.app.build_base(self.gui, self.gui)
         t = self.app.tabuleiro
-        self.assertEqual(len(t.casas),0)
+        self.assertEqual(len(t),12)
+        self.assertEqual(len(t[0]),16)
 
 if __name__ == '__main__':
     unittest.main()

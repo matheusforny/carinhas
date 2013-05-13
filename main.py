@@ -3,8 +3,9 @@ import bottle
 import os
 
 @route('/')
-def hello():
-    return "Benvindo ao Jogo das Carinhas"
+def main():
+    return static_file('carinhas.html', root='src')
+    #return "Benvindo ao Jogo das Carinhas"
 
 @get('/<filename:re:.*\.html>')
 def html(filename):
