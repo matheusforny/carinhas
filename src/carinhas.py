@@ -61,7 +61,7 @@ class Carinhas:
     def build_base(self,gui, svg):
         """Constroi as partes do Jogo. """
         p = gui['banner']
-        self.s = svg.svg(width = 800, height=5000) 
+        self.s = svg.svg(width = 800, height=500) 
         p <= self.s
         self.gui = gui
         #self.build_tabuleiro(gui)
