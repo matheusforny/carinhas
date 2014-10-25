@@ -1,4 +1,4 @@
-.. _releases_0_1_0:
+.. _release0_1_0:
 
 ############################
 Notas de Lançamento V. 0.1.0
@@ -27,12 +27,12 @@ Cada carinha pode ser clicada e ser selecionada. Depois uma casa pode ser escolh
 Melhoramentos
 =============
 
-Nenhum melhoramento notável
+Nenhum melhoramento notável.
 
 Consertos
 =========
 
-Nenhum conserto notável
+Nenhum conserto notável.
 
 Questões e Problemas Conhecidos
 ===============================
@@ -44,5 +44,5 @@ Uma nova versão deve ser feita usando o engenho Crafty.
 Lançamentos Anteriores e Posteriores
 ====================================
 
-Próximo Lançamento:  :ref: `release0_2_0`
+Próximo Lançamento:  :ref:`Lançamento 0.2.0 <release0_2_0>`
 

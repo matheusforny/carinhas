@@ -13,6 +13,7 @@ Contents:
 
    intro.rst
    release0_1_0.rst
+   release0_2_0.rst
    modules.rst
    tests.rst
 

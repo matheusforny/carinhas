@@ -1,4 +1,4 @@
-.. _releases_0_2_0:
+.. _release0_2_0:
 
 ############################
 Notas de Lançamento V. 0.2.0
@@ -53,7 +53,7 @@ Ainda nãe é feita nenhuma análise do crivo.
 Lançamentos Anteriores e Posteriores
 ====================================
 
-Próximo Lançamento:  :ref: `release0_3_0`
+Próximo Lançamento:  **Em Construção**
 
-Lançamento Anterior:  :ref: `release0_1_0`
+Lançamento Anterior:  :ref:`Lançamento 0.1.0 <release0_1_0>`
 
