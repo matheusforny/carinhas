@@ -1,10 +1,10 @@
 .. _testes_carinhas:
 
-############################################################
+####################################
 Jogo das Carinhas - Testes Unitários
-############################################################
+####################################
 
-.. automodule:: test_carinhas
+.. automodule:: carinhas_tests
     :members:
     :undoc-members:
     :show-inheritance:

@@ -15,23 +15,29 @@ Jogo das Carinhas - SVG User Interface
 <html>
 <head>
 <meta charset="iso-8859-1">
-<title>ActivUFRJ: Jogo das Carinhas</title>
+<title>Jogo das Carinhas</title>
 <meta http-equiv="content-type" content="application/xml;charset=utf-8" />
-<link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon" />
-<script type="text/javascript" src="../../lib/brython.js"></script>
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+<script type="text/javascript" src="external/brython/brython.js"></script>
+<script type="text/javascript" src="external/brython/py_VFS.js"></script>
+<script type="text/javascript" src="libs/custom_VFS.js"></script>
+<script type="text/python" src="libs/importhooks/localstorage.py"></script>
+<script type="text/python" src="libs/importhooks/custom_VFS.py"></script>
 <script type="text/javascript">
 function bw_and(a,b) {return a & b}
 function bw_nand(a,b) {return ~a & b}
 </script>
-<script type="text/python" src="carinhas.py">
-</script>
 <script type="text/python">
-import html, svg
+from browser import window
+from browser import doc, svg
+from caras import main
 main(doc,svg)
 </script>
 
 </head>
-<body onLoad="brython(1)">
+<body onLoad="brython({debug:1, cache:'browser', static_stdlib_import:true,
+                       custom_import_funcs:[import_hooks]})">
+     <H1>USER: {{ user }}</H1>
      <div id="banner"></div>
 </body>
 </html>

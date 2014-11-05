@@ -1,10 +1,10 @@
 .. _modulos_carinhas:
 
-############################################################
+######################################
 Jogo das Carinhas - Módulos Principais
-############################################################
+######################################
 
-.. automodule:: carinhas
+.. automodule:: client.caras.carinhas
     :members:
     :undoc-members:
     :show-inheritance:
@@ -14,16 +14,16 @@ Jogo das Carinhas - Módulos Principais
 
 .. seealso::
 
-   Module :mod:`tabuleiro`
+   Module :mod:`client.caras.tabuleiro`
 
 .. note::
-   Programa Principal.
+   Unidade de Modelo Cliente.
 
 
 .. _tabuleiro:
 
 
-.. automodule:: tabuleiro
+.. automodule:: client.caras.tabuleiro
     :members:
     :undoc-members:
     :show-inheritance:
@@ -32,8 +32,8 @@ Jogo das Carinhas - Módulos Principais
     
 .. seealso::
 
-   Module :mod:`carinhas`
+   Module :mod:`client.caras.carinhas`
 
 .. note::
-   Unidade de Modelo.
+   Unidade de Modelo Cliente.
 

@@ -1,7 +1,9 @@
+.. _Pybuilder: http://pybuilder.github.io/
+.. _Google_Cloud: https://cloud.google.com/
 .. _release0_1_0:
 
 ############################
-Notas de Lançamento V. 0.1.0
+Notas de Lançamento V. 0.1.1
 ############################
 
 *Jogo das Carinhas*
@@ -22,12 +24,24 @@ Este jogo inicial permite apenas o teste da interface com o usuário
 Aspecto #1
 **********
 
-Cada carinha pode ser clicada e ser selecionada. Depois uma casa pode ser escolhida com um clique e a carinha é colocada lá.
+O jogo apenas apresenta as carinhas no tabuleiro e não permite nenhuma interação.
 
 Melhoramentos
 =============
 
-Nenhum melhoramento notável.
+Versão para uso do Google Application Engine e PyBuilder.
+
+Melhoramento #1
+***************
+
+Foi adicionada uma configuração para uso do Google_Cloud_. A configuração *app.yaml*
+define os aspectos necessários para rodar no servidor do Goolge Application Engine.
+
+Melhoramento #2
+***************
+
+Foi adicionada uma configuração para uso do construtor de aplicativos PyBuilder_. A configuração *build.py*
+define os aspectos necessários para verificar testes, cobertura, cabeçalhos e detalhes para deployment.
 
 Consertos
 =========
