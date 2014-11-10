@@ -1,0 +1,51 @@
+import math
+
+print("1  0  1  0  1\n1  0  1  1  1\n1  1  1  1  1\n1  1  1  1  1\n1  1  0  1  1\n")
+
+class Point(object):
+
+    def __init__(self, x, y):
+        '''Defines x and y variables'''
+        self.x = x
+        self.y = y
+
+def calcularProximidadeEntreDoisPontos(ponto1, ponto2, arrayPontos):
+    
+    minimoX = 10
+    maximoX = 0
+    minimoY = 10
+    maximoY = 0
+    
+    for ponto in arrayPontos:
+        if(ponto.x > maximoX):
+            maximoX = ponto.x
+        if(ponto.x < minimoX):
+            minimoX = ponto.x
+        if(ponto.y > maximoY):
+            maximoY = ponto.y
+        if(ponto.y < minimoY):
+            minimoY = ponto.y
+            
+    raioDeDistanciaX = math.fabs(maximoX - minimoX) / 2
+    raioDeDistanciaY = math.fabs(maximoY - minimoY) / 2
+    
+    print(raioDeDistanciaX)
+    print(raioDeDistanciaY)
+    
+    if(math.fabs(ponto1.x - ponto2.x) <= raioDeDistanciaX):
+        print("Estao proximos verticalmente")
+        if(math.fabs(ponto1.y - ponto2.y) <= raioDeDistanciaY):
+            print("Estao proximos horizontalmente")
+        else:
+            print("Estao longe horizontalmente")
+    else:
+        print("Estao longe verticalmente")
+            
+ponto1 = Point(2,1)
+ponto2 = Point(4,1)
+ponto3 = Point(2,2)
+ponto4 = Point(3,5)
+
+arrayPontos = [ponto1, ponto2, ponto3, ponto4]
+
+calcularProximidadeEntreDoisPontos(ponto1, ponto3, arrayPontos)
