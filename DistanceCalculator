@@ -9,11 +9,13 @@ class Point(object):
         self.x = x
         self.y = y
 
-def calcularProximidadeEntreDoisPontos(ponto1, ponto2, arrayPontos):
+def calcularProximidadeEntreDoisPontos(ponto1, ponto2, arrayPontos, tamanhoMapa):
     
-    minimoX = 10
+    coeficienteDeDistancia = 0.6
+    
+    minimoX = tamanhoMapa
     maximoX = 0
-    minimoY = 10
+    minimoY = tamanhoMapa
     maximoY = 0
     
     for ponto in arrayPontos:
@@ -26,11 +28,8 @@ def calcularProximidadeEntreDoisPontos(ponto1, ponto2, arrayPontos):
         if(ponto.y < minimoY):
             minimoY = ponto.y
             
-    raioDeDistanciaX = math.fabs(maximoX - minimoX) / 2
-    raioDeDistanciaY = math.fabs(maximoY - minimoY) / 2
-    
-    print(raioDeDistanciaX)
-    print(raioDeDistanciaY)
+    raioDeDistanciaX = 1 + (math.fabs(maximoX - minimoX) * coeficienteDeDistancia)
+    raioDeDistanciaY = 1 + (math.fabs(maximoY - minimoY) * coeficienteDeDistancia)
     
     if(math.fabs(ponto1.x - ponto2.x) <= raioDeDistanciaX):
         print("Estao proximos verticalmente")
@@ -40,12 +39,3 @@ def calcularProximidadeEntreDoisPontos(ponto1, ponto2, arrayPontos):
             print("Estao longe horizontalmente")
     else:
         print("Estao longe verticalmente")
-            
-ponto1 = Point(2,1)
-ponto2 = Point(4,1)
-ponto3 = Point(2,2)
-ponto4 = Point(3,5)
-
-arrayPontos = [ponto1, ponto2, ponto3, ponto4]
-
-calcularProximidadeEntreDoisPontos(ponto1, ponto3, arrayPontos)
