@@ -9,13 +9,6 @@ class Point(object):
 
 def calcularFiguraGeometrica(arrayDePontos):
     
-    if(len(arrayDePontos) == 3):
-        print(calcularTriangulo(arrayDePontos))
-    elif(len(arrayDePontos) == 4):
-        print("QUADRADO")
-        
-def calcularTriangulo(arrayDePontos):
-    
     distanciaEntrePontos = distanciaEntrePontosAtual = 0
     result = True
     
@@ -39,10 +32,3 @@ def calculoDistanciaEntrePontos(ponto1, ponto2):
     
     print (math.floor(math.sqrt((ponto1.x - ponto2.x)**2 + (ponto1.y - ponto2.y)**2)))
     return math.floor(math.sqrt((ponto1.x - ponto2.x)**2 + (ponto1.y - ponto2.y)**2))
-        
-ponto1 = Point(1,2)
-ponto2 = Point(1,4)
-ponto3 = Point(3,3)
-ponto4 = Point(3,5)
-
-arrayPontos = [ponto1, ponto2, ponto3]
