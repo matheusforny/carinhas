@@ -26,8 +26,8 @@ def calcularProximidadeEntreDoisPontos(ponto1, ponto2, arrayPontos, tamanhoMapa)
         if(ponto.y < minimoY):
             minimoY = ponto.y
             
-    raioDeDistanciaX = 1 + (math.fabs(maximoX - minimoX) * coeficienteDeDistancia)
-    raioDeDistanciaY = 1 + (math.fabs(maximoY - minimoY) * coeficienteDeDistancia)
+    raioDeDistanciaX = 2 + (math.fabs(maximoX - minimoX) * coeficienteDeDistancia)
+    raioDeDistanciaY = 2 + (math.fabs(maximoY - minimoY) * coeficienteDeDistancia)
     
     if(math.fabs(ponto1.x - ponto2.x) <= raioDeDistanciaX):
         print("Estao proximos verticalmente")
